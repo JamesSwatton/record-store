@@ -1,5 +1,14 @@
 <h2>Add album</h2>
 
-<form class="add_album_form" action="index.html" method="post">
+<form class="add_album_form" action="/albums" method="post">
+  <label for="title">Album Title:</label>
+  <input type="text" name="title" id="title">
 
+  <label for="name">Artist Name:</label>
+  <input type="text" name="name" id="artist_name">
+
+  <label for="quantity">Quantity:</label>
+  <input type="number" name="quantity" id="quantity">
+
+  <input type="submit" value="Add Album"/>
 </form>

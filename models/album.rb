@@ -3,7 +3,8 @@ require_relative('./artist')
 
 class Album
 
-  attr_reader :id, :title, :artist_id, :quantity
+  attr_reader :id, :title, :artist_id
+  attr_accessor :quantity
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -26,7 +27,7 @@ class Album
           SET (title, artist_id, quantity) = ($1,$2,$3)
           WHERE id = $4"
     values = [@title, @artist_id, @quantity, @id]
-    SqlRunner.(sql, values)
+    SqlRunner.run(sql, values)
   end
 
   def artist()
@@ -34,7 +35,7 @@ class Album
           WHERE id = $1"
     values = [@artist_id]
     results = SqlRunner.run(sql, values)
-    return results[0]['name']
+    return Artist.new(results[0])
   end
 
   def self.find(id)

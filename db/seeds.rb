@@ -47,4 +47,9 @@ p Album.all().count
 
 # p Album.find(26)
 
-p album1.artist()
+p album1.artist().name
+
+album1.quantity = 5
+album1.update()
+
+p Artist.find_id_by_name('Can')

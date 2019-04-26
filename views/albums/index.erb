@@ -2,8 +2,9 @@
 
 <% @albums.each do |album| %>
 
-<p>Album title: <%= album.title  %>  Quantity: <%= album.quantity %></p>
-
-
+<p>Album title: <%= album.title  %> </p>
+<p>Artist: <%= album.artist().name %></p>
+<p>Quantity: <%= album.quantity %></p>
+<br>
 
 <% end %>
