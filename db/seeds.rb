@@ -42,3 +42,7 @@ album3 = Album.new({
 album3.save()
 
 p artist1.albums().count
+
+p Album.all().count
+
+p Album.find(26)
