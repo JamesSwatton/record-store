@@ -33,6 +33,11 @@ class Artist
     return results.map { |artist| Artist.new(artist) }
   end
 
+  def self.sort_all()
+    all_artists = Artist.all()
+    return all_artists.sort_by { |artist| artist.name}
+  end
+
   def self.find(id)
     sql = "SELECT * FROM artists
           WHERE id = $1"
