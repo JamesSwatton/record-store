@@ -45,4 +45,6 @@ p artist1.albums().count
 
 p Album.all().count
 
-p Album.find(26)
+# p Album.find(26)
+
+p album1.artist()
