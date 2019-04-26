@@ -40,3 +40,5 @@ album3 = Album.new({
   })
 
 album3.save()
+
+p artist1.albums().count

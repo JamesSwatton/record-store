@@ -10,4 +10,9 @@ class TestArtist < MiniTest::Test
     assert_equal("The Beatles", result)
   end
 
+  def test_get_all_artists
+    results = Artist.all()
+    assert_equal(2, results.count)
+  end
+
 end
