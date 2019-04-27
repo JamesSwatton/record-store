@@ -1,13 +1,13 @@
 class Stock
   #
-  # attr_reader :id, :artist_id, :album_id, :stock_level
-  #
-  # def initialize(options)
-  #   # @id = options['id'].to_i if options['id']
-  #   @artist_id = options['artist_id'].to_i
-  #   @album_id = options['album_id'].to_i
-  #   @stock_level = options['stock_level'].to_i
-  # end
+  attr_reader :id, :artist_id, :album_id, :stock_level
+
+  def initialize(options)
+    # @id = options['id'].to_i if options['id']
+    @artist_name = options['artist_name']
+    @album_title = options['album_title']
+    @stock_level = options['stock_level'].to_i
+  end
   #
   # def save()
   #   sql = "INSERT INTO inventory (artist_id, album_id, stock_level)

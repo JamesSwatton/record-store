@@ -38,6 +38,26 @@ class Album
     return Artist.new(results[0])
   end
 
+  def stock_level()
+    if @quantity >= 30
+      return "HIGH"
+    elsif @quantity < 30 && @quantity > 10
+      return "MED"
+    else
+      return "LOW"
+    end
+  end
+
+  def self.sort_all_by_artist_name()
+    sql = "SELECT albums.id, albums.title, albums.artist_id, albums.quantity
+          FROM albums
+          JOIN artists
+          ON artists.id = albums.artist_id
+          ORDER BY artists.name;"
+    results = SqlRunner.run(sql)
+    return results.map { |album| Album.new(album) }
+  end
+
   def self.find(id)
     sql = "SELECT * FROM albums
           WHERE id = $1"

@@ -18,6 +18,12 @@ artist2 = Artist.new({
 
 artist2.save()
 
+artist3 = Artist.new({
+  "name" => "ABBA"
+  })
+
+artist3.save()
+
 album1 = Album.new({
   "title" => "Abbey Road",
   "artist_id" => artist1.id,
@@ -41,6 +47,14 @@ album3 = Album.new({
   })
 
 album3.save()
+
+album4 = Album.new({
+  "title" => "Gold",
+  "artist_id" => artist3.id,
+  "quantity" => 70
+  })
+
+album4.save()
 
 # stock1 = Stock.new({
 #   "artist_id" => album1.artist_id,
@@ -68,7 +82,7 @@ album3.save()
 
 
 p artist1.albums().count
-p Album.all().count
+# p Album.all().count
 # p Album.find(26)
 p album1.artist().name
 # album1.quantity = 5
@@ -77,3 +91,7 @@ p album1.artist().name
 # p Artist.find_id_by_name('Can')
 
 # p Artist.sort_all()
+
+# p Album.sort_all_by_artist_name()
+
+# p Album.all()
