@@ -11,7 +11,7 @@
     <% end %>
   <% else %>
     <% if artist.name.end_with?("The") %>
-      <p><%= artist.name.split.reverse.join(" ") %></p>
+      <p><%= artist.name.split.reverse.join(" ") %> -- recently added --</p>
     <% else %>
       <p><%= artist.name %> -- recently added --</p>
     <% end %>
