@@ -2,18 +2,21 @@
 
 <h3><a href="/artists/new">Add Artist</a></h3>
 
+<!-- adds tag showing artist was recintly added if poped from list %> -->
+<!-- index artists alphabetically while ignoring 'The' prefix -->
 <% @artists.each do |artist| %>
-  <% if artist.name != @recently_added_artist.name %>
-    <% if artist.name.end_with?("The") %>
-      <p><%= artist.name.split.reverse.join(" ") %></p>
-    <% else %>
-      <p><%= artist.name  %> </p>
-    <% end %>
+<% name = swap_the(artist.name)%>
+  <% if name != swap_the(@recently_added_artist.name) %>
+    <p><%= name  %> </p>
   <% else %>
-    <% if artist.name.end_with?("The") %>
-      <p><%= artist.name.split.reverse.join(" ") %> -- recently added --</p>
-    <% else %>
-      <p><%= artist.name %> -- recently added --</p>
-    <% end %>
+      <p><%= name %> -- recently added --</p>
   <% end %>
+<% end %>
+
+<% def swap_the(string) %>
+  <% if string.start_with?("The") || string.end_with?("The") %>
+    <% string = string.split.reverse.join(" ") %>
+    <% return string %>
+  <% end %>
+  <% return string %>
 <% end %>

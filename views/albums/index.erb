@@ -1,10 +1,18 @@
 <h2>ALBUMS</h2>
 
 <% @albums.each do |album| %>
-
+<% name = swap_the(album.artist().name) %>
 <p>Album: <%= album.title  %> </p>
-<p>Artist: <%= album.artist().name %></p>
+<p>Artist: <%= name %></p>
 <p>Quantity: <%= album.quantity %></p>
 <br>
 
+<% end %>
+
+<% def swap_the(string) %>
+  <% if string.start_with?("The") || string.end_with?("The") %>
+    <% string = string.split.reverse.join(" ") %>
+    <% return string %>
+  <% end %>
+  <% return string %>
 <% end %>
