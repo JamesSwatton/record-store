@@ -3,7 +3,17 @@
 <h3><a href="/artists/new">Add Artist</a></h3>
 
 <% @artists.each do |artist| %>
-
-<p><%= artist.name  %> </p>
-
+  <% if artist.name != @recently_added_artist.name %>
+    <% if artist.name.end_with?("The") %>
+      <p><%= artist.name.split.reverse.join(" ") %></p>
+    <% else %>
+      <p><%= artist.name  %> </p>
+    <% end %>
+  <% else %>
+    <% if artist.name.end_with?("The") %>
+      <p><%= artist.name.split.reverse.join(" ") %></p>
+    <% else %>
+      <p><%= artist.name %> -- recently added --</p>
+    <% end %>
+  <% end %>
 <% end %>
