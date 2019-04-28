@@ -56,31 +56,6 @@ album4 = Album.new({
 
 album4.save()
 
-# stock1 = Stock.new({
-#   "artist_id" => album1.artist_id,
-#   "album_id" => album1.id,
-#   "stock_level" => album1.quantity
-#   })
-#
-# stock1.save()
-#
-# stock2 = Stock.new({
-#   "artist_id" => album2.artist_id,
-#   "album_id" => album2.id,
-#   "stock_level" => album2.quantity
-#   })
-#
-# stock2.save()
-#
-# stock3 = Stock.new({
-#   "artist_id" => album3.artist_id,
-#   "album_id" => album3.id,
-#   "stock_level" => album3.quantity
-#   })
-#
-# stock3.save()
-
-
 p artist1.albums().count
 # p Album.all().count
 # p Album.find(26)
@@ -95,3 +70,5 @@ p album1.artist().name
 # p Album.sort_all_by_artist_name()
 
 # p Album.all()
+
+p Artist.first_char_from_names()

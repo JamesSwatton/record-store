@@ -1,3 +1,7 @@
+<% @first_char_from_names.each do |char| %>
+<h1><%= char %></h1>
+<% end %>
+
 <h2>ARTISTS</h2>
 
 <h3><a href="/artists/new">Add Artist</a></h3>
@@ -7,9 +11,9 @@
 <% @artists.each do |artist| %>
 <% name = swap_the(artist.name)%>
   <% if name != swap_the(@recently_added_artist.name) %>
-    <p><%= name  %> </p>
+    <p><a href="/artists/<%= artist.id %>"> <%= name  %> </a></p>
   <% else %>
-      <p><%= name %> -- recently added --</p>
+      <p><a href="/artists/<%= artist.id %>"> <%= name %> </a> -- recently added --</p>
   <% end %>
 <% end %>
 

@@ -30,6 +30,13 @@ class Artist
     return results.map { |album| Album.new(album)}
   end
 
+  def self.first_char_from_names()
+    all_names = Artist.sort_all.map { |artist| artist.name }
+    all_names_uniq = all_names.uniq
+    first_char_from_names = all_names_uniq.map { |name| name[0]}
+    return first_char_from_names
+  end
+
   def self.all()
     sql = "SELECT * FROM artists"
     results = SqlRunner.run(sql)

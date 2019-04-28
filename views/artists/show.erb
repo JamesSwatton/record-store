@@ -1,0 +1,18 @@
+<h2><%= swap_the(@artist.name) %></h2>
+<form action="/artists/<%= @artist.id %>/delete" method="post">
+  <input type="submit" value="Delete">
+</form>
+<h3>Albums</h3>
+<ul>
+  <% @artist.albums.each do |album| %>
+  <li><%= album.title %></li>
+  <% end %>
+</ul>
+
+<% def swap_the(string) %>
+  <% if string.start_with?("The") || string.end_with?("The") %>
+    <% string = string.split.reverse.join(" ") %>
+    <% return string %>
+  <% end %>
+  <% return string %>
+<% end %>
