@@ -32,9 +32,16 @@ class Artist
 
   def self.first_char_from_names()
     all_names = Artist.sort_all.map { |artist| artist.name }
-    all_names_uniq = all_names.uniq
-    first_char_from_names = all_names_uniq.map { |name| name[0]}
-    return first_char_from_names
+    first_char_from_names = all_names.map { |name| name[0]}
+    return first_char_from_names.uniq
+  end
+
+  def self.filter_by_char(char)
+    sql = "SELECT * FROM artists
+          WHERE name LIKE $1;"
+    values = [char + '%']
+    results = SqlRunner.run(sql, values)
+    return results.map { |artist| Artist.new(artist) }
   end
 
   def self.all()
@@ -46,6 +53,12 @@ class Artist
   def self.sort_all()
     all_artists = Artist.all()
     return all_artists.sort_by { |artist| artist.name}
+  end
+
+  def self.all_names()
+    all_artists = Artist.all()
+    artist_names = all_artists.map { |artist| artist.name }
+    return artist_names
   end
 
   def self.find(id)

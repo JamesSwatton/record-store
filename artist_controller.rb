@@ -18,13 +18,9 @@ get '/artists/new' do
 end
 
 post '/artists' do
-  all_artists = Artist.all()
-  artist_names = all_artists.map { |artist| artist.name }
-
-  if artist_names.include?(swap_the(params['name']))
-      redirect to '/artists/new'
+  if Artist.all_names.include?(swap_the(params['name']))
+    redirect to '/artists/new'
   end
-
   Artist.new(params).save()
   redirect to '/artists'
 end

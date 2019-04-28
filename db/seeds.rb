@@ -24,6 +24,12 @@ artist3 = Artist.new({
 
 artist3.save()
 
+artist4 = Artist.new({
+  "name" => "Blur"
+  })
+
+artist4.save()
+
 album1 = Album.new({
   "title" => "Abbey Road",
   "artist_id" => artist1.id,
@@ -72,3 +78,5 @@ p album1.artist().name
 # p Album.all()
 
 p Artist.first_char_from_names()
+
+p Artist.filter_by_char('B')
