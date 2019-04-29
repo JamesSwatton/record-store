@@ -36,6 +36,19 @@ post '/albums' do
   redirect to '/albums'
 end
 
+get '/albums/:id/edit' do
+  @album = Album.find(params['id'])
+  erb(:"albums/edit")
+end
+
+post '/albums/:id' do
+  album = Album.new( params )
+  # binding.pry
+
+  album.update
+  redirect to "/albums"
+end
+
 
 
 def swap_the(string)

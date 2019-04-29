@@ -83,4 +83,7 @@ p Artist.first_char_from_names()
 
 # p Album.exists?(album1.title)
 
-Album.delete_all_by_artist(artist1.id)
+# Album.delete_all_by_artist(artist1.id)
+
+band = "Rolling Stones The"
+p Artist.swap_the(band)

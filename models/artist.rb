@@ -1,3 +1,4 @@
+require( 'pry-byebug' )
 require_relative('../db/sql_runner')
 require_relative('./album')
 
@@ -28,6 +29,23 @@ class Artist
     values = [@id]
     results = SqlRunner.run(sql, values)
     return results.map { |album| Album.new(album)}
+  end
+
+  def self.swap_the(string)
+    if string.start_with?("The ") || string.end_with?("The")
+      split_string = string.split
+      # binding.pry
+      if split_string[0] == "The"
+        string_without_the = split_string[1..-1].join(" ")
+        put_the_to_end = string_without_the + " " + split_string[0]
+        return put_the_to_end
+      else
+        string_without_the = split_string[0..-2].join(" ")
+        put_the_to_start = split_string[-1] + " " + string_without_the
+        return put_the_to_start
+      end
+    end
+    return string
   end
 
   def self.first_char_from_names()
