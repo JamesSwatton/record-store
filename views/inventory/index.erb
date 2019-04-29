@@ -10,17 +10,9 @@
     <% @stock.each do |album| %>
       <tr>
         <td><%= album.title  %></td>
-        <td><%= swap_the(album.artist().name) %></td>
+        <td><%= album.artist.swap_the() %></td>
         <td><%= album.stock_level() %></td>
       </tr>
     <% end %>
   </body>
 </table>
-
-<% def swap_the(string) %>
-  <% if string.start_with?("The") || string.end_with?("The") %>
-    <% string = string.split.reverse.join(" ") %>
-    <% return string %>
-  <% end %>
-  <% return string %>
-<% end %>

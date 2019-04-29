@@ -1,14 +1,13 @@
-<h2>Add album</h2>
+<h2>Add album to: <%= @artist.swap_the %></h2>
 
 <form class="add_album_form" action="/albums" method="post">
   <label for="title">Album Title:</label>
   <input type="text" name="title" id="title">
 
-  <label for="name">Artist Name:</label>
-  <input type="text" name="name" id="artist_name">
-
   <label for="quantity">Quantity:</label>
   <input type="number" name="quantity" id="quantity">
+
+  <input type="hidden" name="artist_id" value="<%= @artist.id %>">
 
   <input type="submit" value="Add Album"/>
 </form>
