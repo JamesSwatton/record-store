@@ -58,6 +58,11 @@ class Album
     return results.map { |album| Album.new(album) }
   end
 
+  def self.exists?(album_title)
+    all_album_titles = Album.all.map { |album| album.title }
+    return all_album_titles.include?(album_title)
+  end
+
   def self.find(id)
     sql = "SELECT * FROM albums
           WHERE id = $1"
