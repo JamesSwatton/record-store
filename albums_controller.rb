@@ -16,7 +16,12 @@ get '/albums/new' do
 end
 
 post '/albums' do
+  album_title = params['title']
   artist_name = swap_the(params['name'])
+
+  if Album.exists?(album_title)
+    redirect to '/albums'
+  end
 
   if Artist.exists?(artist_name)
       # use find_id_by_name method
