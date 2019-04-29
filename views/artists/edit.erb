@@ -1,8 +1,14 @@
 <h2>Edit: <%= @artist.swap_the() %></h2>
 
-<form class="edit_artist_form" action="/artists/<%= @artist.id %>/edit" method="POST">
+<form action="/artists/<%= @artist.id %>/edit" method="POST">
 
   <input type="text" name="name" value="<%= @artist.swap_the() %>">
 
   <input type="submit" value="Edit">
+</form>
+
+<form action="/artists/<%= @artist.id %>/delete" method="post">
+  <input type="submit" value="Delete">
+</form>
+
 </form>

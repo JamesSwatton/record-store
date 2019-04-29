@@ -7,8 +7,14 @@ require_relative( '../models/stock.rb' )
 also_reload( '../models/*' )
 
 get '/albums' do
-  @albums = Album.all()
+  @albums = Album.all.reverse
   erb(:"albums/index")
+end
+
+get '/albums/new' do
+  @artists = Artist.sort_all()
+  # binding.pry
+  erb(:"albums/new")
 end
 
 get '/albums/:id/new' do
@@ -24,7 +30,7 @@ post '/albums' do
   end
 
   Album.new( params ).save()
-  redirect to '/artists'
+  redirect to '/albums'
 end
 
 get '/albums/:id/edit' do
@@ -32,20 +38,10 @@ get '/albums/:id/edit' do
   erb(:"albums/edit")
 end
 
-post '/albums/:id' do
+post '/albums/:id/edit' do
   album = Album.new( params )
   # binding.pry
 
   album.update
   redirect to "/albums"
-end
-
-
-
-def swap_the(string)
-  if string.start_with?("The") || string.end_with?("The")
-    string = string.split.reverse.join(" ")
-    return string
-  end
-  return string
 end

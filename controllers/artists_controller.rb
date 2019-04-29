@@ -38,6 +38,7 @@ end
 post '/artists/:id/edit' do
   artist = Artist.new(params)
   artist.update()
+  redirect to "/artists/#{params['id']}"
 end
 
 post '/artists/:id/delete' do
