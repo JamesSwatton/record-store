@@ -22,15 +22,15 @@ get '/albums/:id/new' do
   erb(:"albums/new")
 end
 
-post '/albums' do
+post '/albums/:id/new' do
   album_title = params['title']
 
   if Album.exists?(album_title)
-    redirect to '/albums'
+    redirect to "/artists/#{params['id']}"
   end
 
   Album.new( params ).save()
-  redirect to '/albums'
+  redirect to "/artists/#{params['id']}"
 end
 
 get '/albums/:id/edit' do
