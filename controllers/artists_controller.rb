@@ -1,10 +1,10 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require( 'pry-byebug' )
-require_relative( './models/album.rb' )
-require_relative( './models/artist.rb' )
-require_relative( './models/stock.rb' )
-also_reload( './models/*' )
+require_relative( '../models/album.rb' )
+require_relative( '../models/artist.rb' )
+require_relative( '../models/stock.rb' )
+also_reload( '../models/*' )
 
 get '/artists' do
   @first_char_from_names = Artist.first_char_from_names()

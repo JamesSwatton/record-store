@@ -12,9 +12,7 @@ class Artist
   end
 
   def save()
-    if @name.start_with?("The")
-      @name = @name.split.reverse.join(" ")
-    end
+    @name = Artist.swap_the(@name)
     sql = "INSERT INTO artists (name)
           VALUES ($1)
           RETURNING id;"
