@@ -1,11 +1,14 @@
 <h2>ALBUMS</h2>
 
+<a href="/albums/new">Add Album</a>
+
 <% @albums.each do |album| %>
-<% name = album.artist.swap_the() %>
-<p>Title: <%= album.title  %> </p>
-<p>Artist: <%= name %></p>
-<p>Quantity: <%= album.quantity %></p>
-<a href="/albums/<%= album.id %>/edit">Edit</a>
-<br>
+  <% name = album.artist.swap_the() %>
+
+  <p>Title: <%= album.title  %> </p>
+
+  <p>Artist: <%= name %></p>
+
+  <a href="/albums/<%= album.id %>/edit">Edit</a>
 
 <% end %>

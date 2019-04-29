@@ -13,13 +13,17 @@ end
 
 get '/albums/new' do
   @artists = Artist.sort_all()
-  # binding.pry
   erb(:"albums/new")
+end
+
+post '/albums/new' do
+  Album.new(params).save()
+  redirect to "/artists/#{params['artist_id']}"
 end
 
 get '/albums/:id/new' do
   @artist = Artist.find(params['id'])
-  erb(:"albums/new")
+  erb(:"albums/id_new")
 end
 
 post '/albums/:id/new' do

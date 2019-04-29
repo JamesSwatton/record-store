@@ -25,6 +25,11 @@ post '/artists' do
   redirect to '/artists'
 end
 
+get '/artists/A' do
+  # @artists = Artist.filter_by_char(params['id'])
+  erb(:'artists/index')
+end
+
 get '/artists/:id' do
   @artist = Artist.find(params['id'])
   erb(:"artists/show")

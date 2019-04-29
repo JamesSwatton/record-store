@@ -1,13 +1,21 @@
-<h2>Add album to: <%= @artist.swap_the %></h2>
+<h2>Add Album</h2>
 
-<form class="add_id_album_form" action="/albums/<%= @artist.id %>/new" method="post">
-  <label for="title">Album Title:</label>
-  <input type="text" name="title" id="title">
+<form action="/albums/new" method="post">
+
+  <label for="artist_select">Select Artist:</label>
+  <select name="artist_id" id="house_select">
+    <% @artists.each do |artist| %>
+      <option value=<%= artist.id %>><%= artist.swap_the %></option>
+    <% end %>
+  </select>
+
+  <label for="title">Title:</label>
+  <input type="text" name="title"/>
 
   <label for="quantity">Quantity:</label>
-  <input type="number" name="quantity" id="quantity">
+  <input type="number" name="quantity"/>
 
-  <input type="hidden" name="artist_id" value="<%= @artist.id %>">
-
-  <input type="submit" value="Add Album"/>
+  <input type="submit" value="Add Album">
 </form>
+
+<a href="/artists/new">Add Artist</a>

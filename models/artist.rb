@@ -23,11 +23,11 @@ class Artist
   end
 
   def update()
-    # name = swap_the
+    name = swap_the()
     sql = "UPDATE artists
           SET name = $1
           WHERE id = $2;"
-    values = [@name, @id]
+    values = [name, @id]
     SqlRunner.run(sql,values)
   end
 
