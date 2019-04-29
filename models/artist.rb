@@ -69,6 +69,11 @@ class Artist
     return Artist.new(results.first)
   end
 
+  def self.exists?(artist_name)
+    all_artist_names = Artist.all.map { |artist| artist.name }
+    return all_artist_names.include?(artist_name)
+  end
+
   def self.find_id_by_name(name)
     sql = "SELECT id FROM artists
           WHERE name = $1"

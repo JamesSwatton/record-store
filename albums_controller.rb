@@ -16,12 +16,9 @@ get '/albums/new' do
 end
 
 post '/albums' do
-  all_artists = Artist.all()
-  artist_names = all_artists.map { |artist| artist.name }
-
   artist_name = swap_the(params['name'])
 
-  if artist_names.include?(artist_name)
+  if Artist.exists?(artist_name)
       # use find_id_by_name method
       artist_id = Artist.find_id_by_name(artist_name)
       Album.new( {'title' => params['title'], 'artist_id' => artist_id, 'quantity' => params['quantity'] }).save()
