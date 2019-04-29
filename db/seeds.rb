@@ -90,3 +90,5 @@ p Artist.first_char_from_names()
 # p Album.exists?(album1.title)
 
 # Album.delete_all_by_artist(artist1.id)
+# artist1.name = "Help me!"
+# artist1.update()

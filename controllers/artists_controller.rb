@@ -35,6 +35,11 @@ get '/artists/:id/edit' do
   erb(:"artists/edit")
 end
 
+post '/artists/:id/edit' do
+  artist = Artist.new(params)
+  artist.update()
+end
+
 post '/artists/:id/delete' do
   Artist.delete(params['id'])
   redirect to '/artists'
