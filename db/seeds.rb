@@ -30,6 +30,12 @@ artist4 = Artist.new({
 
 artist4.save()
 
+artist5 = Artist.new({
+  "name" => "The Rolling Stones"
+  })
+
+artist5.save()
+
 album1 = Album.new({
   "title" => "Abbey Road",
   "artist_id" => artist1.id,
@@ -84,6 +90,3 @@ p Artist.first_char_from_names()
 # p Album.exists?(album1.title)
 
 # Album.delete_all_by_artist(artist1.id)
-
-band = "Rolling Stones The"
-p Artist.swap_the(band)

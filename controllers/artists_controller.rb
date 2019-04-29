@@ -34,12 +34,3 @@ post '/artists/:id/delete' do
   Artist.delete(params['id'])
   redirect to '/artists'
 end
-
-
-def swap_the(string)
-  if string.start_with?("The") || string.end_with?("The")
-    string = string.split.reverse.join(" ")
-    return string
-  end
-  return string
-end

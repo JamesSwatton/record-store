@@ -12,11 +12,11 @@ class Artist
   end
 
   def save()
-    @name = Artist.swap_the(@name)
+    name = swap_the()
     sql = "INSERT INTO artists (name)
           VALUES ($1)
           RETURNING id;"
-    values = [@name]
+    values = [name]
     results = SqlRunner.run(sql, values)
     @id = results.first['id'].to_i
   end
@@ -29,9 +29,9 @@ class Artist
     return results.map { |album| Album.new(album)}
   end
 
-  def self.swap_the(string)
-    if string.start_with?("The ") || string.end_with?("The")
-      split_string = string.split
+  def swap_the()
+    if @name.start_with?("The ") || @name.end_with?("The")
+      split_string = @name.split
       # binding.pry
       if split_string[0] == "The"
         string_without_the = split_string[1..-1].join(" ")
@@ -43,7 +43,7 @@ class Artist
         return put_the_to_start
       end
     end
-    return string
+    return @name
   end
 
   def self.first_char_from_names()
