@@ -81,4 +81,6 @@ p Artist.first_char_from_names()
 
 # p Artist.filter_by_char('B')
 
-p Album.exists?(album1.title)
+# p Album.exists?(album1.title)
+
+Album.delete_all_by_artist(artist1.id)

@@ -77,8 +77,15 @@ class Album
     return results.map { |album| Album.new(album) }
   end
 
+  def self.delete_all_by_artist(artist_id)
+    sql = "DELETE FROM albums
+          WHERE artist_id = $1;"
+    values = [artist_id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.delete_all()
-    sql = "DELETE FROM artists;"
+    sql = "DELETE FROM albums;"
     SqlRunner.run(sql)
   end
 
