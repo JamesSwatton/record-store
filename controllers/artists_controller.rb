@@ -18,7 +18,10 @@ get '/artists/new' do
 end
 
 post '/artists' do
-  if Artist.all_names.include?(swap_the(params['name']))
+  artist = Artist.new(params)
+  artist.name = artist.swap_the()
+
+  if Artist.exists?(artist.name)
     redirect to '/artists/new'
   end
   Artist.new(params).save()
