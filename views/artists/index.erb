@@ -1,5 +1,6 @@
 <% @first_char_from_names.each do |char| %>
-<h1><%= char %></h1>
+<h1><a href="/artists/filter/<%= char.downcase %>"><%= char %></a></h1>
+
 <% end %>
 
 <h2>ARTISTS</h2>

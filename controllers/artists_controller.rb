@@ -25,8 +25,10 @@ post '/artists' do
   redirect to '/artists'
 end
 
-get '/artists/A' do
-  # @artists = Artist.filter_by_char(params['id'])
+get '/artists/filter/:char' do
+  @first_char_from_names = Artist.first_char_from_names()
+  @artists = Artist.filter_by_char(params[:char].upcase)
+  @recently_added_artist = Artist.all.pop
   erb(:'artists/index')
 end
 
