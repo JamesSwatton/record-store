@@ -42,7 +42,7 @@ class Artist
   def swap_the()
     if @name.start_with?("The ") || @name.end_with?("The")
       split_string = @name.split
-      # binding.pry
+      
       if split_string[0] == "The"
         string_without_the = split_string[1..-1].join(" ")
         put_the_to_end = string_without_the + " " + split_string[0]

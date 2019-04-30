@@ -36,6 +36,12 @@ artist5 = Artist.new({
 
 artist5.save()
 
+artist6 = Artist.new({
+  "name" => "The Pink Floyd"
+  })
+
+artist6.save()
+
 album1 = Album.new({
   "title" => "Abbey Road",
   "artist_id" => artist1.id,

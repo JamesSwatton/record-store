@@ -38,13 +38,13 @@ post '/albums/:id/new' do
 end
 
 get '/albums/:id/edit' do
+  @artists = Artist.all()
   @album = Album.find(params['id'])
   erb(:"albums/edit")
 end
 
 post '/albums/:id/edit' do
   album = Album.new( params )
-  # binding.pry
 
   album.update
   redirect to "/albums"
