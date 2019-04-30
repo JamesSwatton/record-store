@@ -1,5 +1,5 @@
 body {
-  width: 75%;
+  width: 70%;
   margin: auto;
 }
 
@@ -7,16 +7,37 @@ nav {
 background-color: gray;
 }
 
+table {
+  height: 40%;
+  /* left: 10%; */
+  margin: auto;
+  overflow-y: scroll;
+  /* position: static; */
+  width: 70%;
+}
+
+thead th {
+  padding: 5px;
+  background: #88CCF1;
+  color: #FFF;
+  /* font-family: 'Lato', sans-serif; */
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
 #menu {
-  /* width: 220px; */
   display: flex;
+  justify-content: center;
   margin: 0 auto;
 }
 
 .menu-item {
   display: flex;
-  justify-content: center;
-  flex-grow: 1;
+  padding: 0 50px;
+  /* justify-content: center;
+  flex-grow: 1; */
 }
 
 .logo {
@@ -24,13 +45,14 @@ background-color: gray;
 }
 
 .search {
-  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: gray;
   text-align: center;
   display: flex;
   margin: 0 auto;
 }
 
 .search h1 {
-  display: inline-block;
-  flex-grow: 1;
 }
