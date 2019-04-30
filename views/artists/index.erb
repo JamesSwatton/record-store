@@ -1,3 +1,4 @@
+<h2>ARTISTS</h2>
 
 <div class="search">
   <% @first_char_from_names.each do |char| %>
@@ -5,17 +6,18 @@
   <% end %>
 </div>
 
-<h2>ARTISTS</h2>
-
 <h3><a href="/artists/new">Add Artist</a></h3>
 
 <!-- adds tag showing artist was recintly added if poped from list %> -->
 <!-- index artists alphabetically while ignoring 'The' prefix -->
-<% @artists.each do |artist| %>
-<% name = artist.swap_the()%>
-  <% if name != @recently_added_artist.swap_the() %>
-    <p><a href="/artists/<%= artist.id %>"> <%= name  %> </a></p>
-  <% else %>
-      <p><a href="/artists/<%= artist.id %>"> <%= name %> </a> -- recently added --</p>
+
+<div class="artists">
+  <% @artists.each do |artist| %>
+  <% name = artist.swap_the()%>
+    <% if name != @recently_added_artist.swap_the() %>
+      <p><a href="/artists/<%= artist.id %>"> <%= name  %> </a></p>
+    <% else %>
+        <p><a href="/artists/<%= artist.id %>"> <%= name %> </a><br> -- recently added --</p>
+    <% end %>
   <% end %>
-<% end %>
+</div>

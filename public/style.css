@@ -8,18 +8,18 @@ background-color: gray;
 }
 
 table {
-  border-collapse: collapse;
+  /* border-collapse: collapse; */
   /* height: 40%; */
   /* left: 10%; */
   margin: auto;
   /* overflow-y: scroll; */
   /* position: static; */
-  width: 70%;
+  width: 50%;
 }
 
 th {
-  border: 1px solid black;
-  padding: 5px;
+  /* border: 1px solid black; */
+  padding: 10px;
   background: #88CCF1;
   color: #FFF;
   /* font-family: 'Lato', sans-serif; */
@@ -42,8 +42,8 @@ td[scope="HIGH"] {
 }
 
 td {
-  padding: 3px;
-  border: 1px solid black;
+  padding: 5px;
+  /* border: 1px solid black; */
   text-align: center;
 }
 
@@ -65,6 +65,8 @@ tr {
 }
 
 .logo {
+  margin: auto;
+  width: 150px;
   text-align: center;
 }
 
@@ -79,4 +81,13 @@ tr {
 }
 
 .search h1 {
+}
+
+.artists {
+  display: flex;
+  flex-direction: column;
+}
+
+.artists p {
+  padding: 10px;
 }
