@@ -1,11 +1,10 @@
+<h2>ALBUMS</h2>
+
 <div class="search">
   <% @first_char_from_titles.each do |char| %>
   <h1><a href="/albums/filter/<%= char.downcase %>"><%= char %></a></h1>
   <% end %>
 </div>
-
-
-<h2>ALBUMS</h2>
 
 <h3><a href="/albums/new">Add Album</a></h3>
 

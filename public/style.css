@@ -1,10 +1,15 @@
 body {
-  width: 70%;
+  width: 60%;
   margin: auto;
 }
 
 nav {
-background-color: gray;
+  width: 400;
+  /* background-color: black; */
+
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 table {
@@ -51,17 +56,10 @@ tr {
   background: #f4f7f8;
 }
 
-#menu {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-}
 
-.menu-item {
+#menu-item {
   display: flex;
   padding: 0 50px;
-  /* justify-content: center;
-  flex-grow: 1; */
 }
 
 .logo {
@@ -90,4 +88,10 @@ tr {
 
 .artists p {
   padding: 10px;
+  background-color: #f4f7f8;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
