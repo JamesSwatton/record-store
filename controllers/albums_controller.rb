@@ -7,6 +7,7 @@ require_relative( '../models/stock.rb' )
 also_reload( '../models/*' )
 
 get '/albums' do
+  @recently_added_album = Album.all.pop
   @albums = Album.all.reverse
   erb(:"albums/index")
 end
@@ -19,6 +20,11 @@ end
 post '/albums/new' do
   Album.new(params).save()
   redirect to "/artists/#{params['artist_id']}"
+end
+
+get '/albums/:id' do
+  @album = Album.find(params['id'])
+  erb(:"albums/show")
 end
 
 get '/albums/:id/new' do

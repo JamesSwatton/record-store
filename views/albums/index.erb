@@ -1,14 +1,11 @@
 <h2>ALBUMS</h2>
 
-<a href="/albums/new">Add Album</a>
+<h3><a href="/albums/new">Add Album</a></h3>
 
 <% @albums.each do |album| %>
-  <% name = album.artist.swap_the() %>
-
-  <p>Title: <%= album.title  %> </p>
-
-  <p>Artist: <%= name %></p>
-
-  <a href="/albums/<%= album.id %>/edit">Edit</a>
-  
+  <% if album != @recently_added_album %>
+    <p><a href="/albums/<%= album.id %>"> <%= album.title %> </a></p>
+  <% else %>
+      <p><a href="/albums/<%= album.id %>"> <%= album.title %> </a> -- recently added --</p>
+  <% end %>
 <% end %>
