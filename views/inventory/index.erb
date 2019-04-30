@@ -11,7 +11,7 @@
       <tr>
         <td><%= album.title  %></td>
         <td><%= album.artist.swap_the() %></td>
-        <td><%= album.stock_level() %></td>
+        <td scope="<%= album.stock_level() %>"><%= album.stock_level() %></td>
       </tr>
     <% end %>
   </body>

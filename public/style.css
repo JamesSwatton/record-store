@@ -8,15 +8,17 @@ background-color: gray;
 }
 
 table {
-  height: 40%;
+  border-collapse: collapse;
+  /* height: 40%; */
   /* left: 10%; */
   margin: auto;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   /* position: static; */
   width: 70%;
 }
 
-thead th {
+th {
+  border: 1px solid black;
   padding: 5px;
   background: #88CCF1;
   color: #FFF;
@@ -25,6 +27,28 @@ thead th {
   font-weight: 100;
   letter-spacing: 5px;
   text-transform: uppercase;
+}
+
+td[scope="LOW"] {
+  background-color: red;
+}
+
+td[scope="MED"] {
+  background-color: orange;
+}
+
+td[scope="HIGH"] {
+  background-color: green;
+}
+
+td {
+  padding: 3px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+tr {
+  background: #f4f7f8;
 }
 
 #menu {
