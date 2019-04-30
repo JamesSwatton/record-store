@@ -1,7 +1,9 @@
-<% @first_char_from_names.each do |char| %>
-<h1><a href="/artists/filter/<%= char.downcase %>"><%= char %></a></h1>
 
-<% end %>
+<div class="search">
+  <% @first_char_from_names.each do |char| %>
+  <h1><a href="/artists/filter/<%= char.downcase %>"><%= char %></a></h1>
+  <% end %>
+</div>
 
 <h2>ARTISTS</h2>
 

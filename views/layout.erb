@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Record Store</title>
+  <title>Sleeve Notes</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<main>
-  <nav>
-    <ul class="flex">
-      <li>
-        <a href="/artists">Artists</a>
-      </li>
-      <li>
-        <a href="/albums">Albums</a>
-      </li>
-      <li>
-        <a href="/inventory">Inventory</a>
-      </li>
-    </ul>
+  <nav id="menu">
+    <li class="menu-item"><a href='/artists'>Artists</a></li>
+    <li class="menu-item"><a href='/albums'>Albums</a></li>
+    <li class="menu-item"><a href='/inventory'>Inventory</a></li>
   </nav>
-  <section id="content">
+  <div class="logo">
+    <h1>Sleeve Notes</h1>
+    <h2>Record Store</h2>
+  </div>
+
   <%= yield %>
-  </section>
-  </main>
 </body>
 </html>

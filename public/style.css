@@ -1,0 +1,26 @@
+#menu {
+  width: 220px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.menu-item {
+  display: inline-block;
+  flex-grow: 1;
+}
+
+.logo {
+  text-align: center;
+}
+
+.search {
+  width: 500px;
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
+}
+
+.search h1 {
+  display: inline-block;
+  flex-grow: 1;
+}
