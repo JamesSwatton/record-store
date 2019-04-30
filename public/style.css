@@ -1,11 +1,21 @@
+body {
+  width: 75%;
+  margin: auto;
+}
+
+nav {
+background-color: gray;
+}
+
 #menu {
-  width: 220px;
+  /* width: 220px; */
   display: flex;
   margin: 0 auto;
 }
 
 .menu-item {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   flex-grow: 1;
 }
 
