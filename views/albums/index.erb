@@ -11,4 +11,8 @@
 
   <a href="/albums/<%= album.id %>/edit">Edit</a>
 
+  <form action="/albums/<%= album.id %>/delete" method="post">
+    <input type="submit" value="Delete">
+  </form>
+  
 <% end %>

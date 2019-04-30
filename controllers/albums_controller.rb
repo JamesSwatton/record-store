@@ -49,3 +49,8 @@ post '/albums/:id/edit' do
   album.update
   redirect to "/albums"
 end
+
+post '/albums/:id/delete' do
+  Album.delete(params['id'])
+  redirect to '/albums'
+end
