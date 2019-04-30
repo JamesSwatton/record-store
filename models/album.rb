@@ -48,6 +48,20 @@ class Album
     end
   end
 
+  def self.first_char_from_titles()
+    all_titles = Album.sort_all.map { |album| album.title }
+    first_char_from_title = all_titles.map { |title| title[0]}
+    return first_char_from_title.uniq
+  end
+
+  def self.filter_by_char(char)
+    sql = "SELECT * FROM albums
+          WHERE title LIKE $1;"
+    values = [char + '%']
+    results = SqlRunner.run(sql, values)
+    return results.map { |album| Album.new(album) }
+  end
+
   def self.sort_all_by_artist_name()
     sql = "SELECT albums.id, albums.title, albums.artist_id, albums.quantity
           FROM albums
@@ -75,6 +89,11 @@ class Album
     sql = "SELECT * FROM albums"
     results = SqlRunner.run(sql)
     return results.map { |album| Album.new(album) }
+  end
+
+  def self.sort_all()
+    all_albums = Album.all()
+    return all_albums.sort_by { |album| album.title}
   end
 
   def self.delete_all_by_artist(artist_id)

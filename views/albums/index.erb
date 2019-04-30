@@ -1,11 +1,16 @@
+<% @first_char_from_titles.each do |char| %>
+<h1><a href="/albums/filter/<%= char.downcase %>"><%= char %></a></h1>
+
+<% end %>
+
 <h2>ALBUMS</h2>
 
 <h3><a href="/albums/new">Add Album</a></h3>
 
 <% @albums.each do |album| %>
-  <% if album != @recently_added_album %>
+  <% if album.title != @recently_added_album.title %>
     <p><a href="/albums/<%= album.id %>"> <%= album.title %> </a></p>
   <% else %>
-      <p><a href="/albums/<%= album.id %>"> <%= album.title %> </a> -- recently added --</p>
+    <p><a href="/albums/<%= album.id %>"> <%= album.title %> </a> -- recently added --</p>
   <% end %>
 <% end %>

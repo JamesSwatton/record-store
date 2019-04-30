@@ -7,8 +7,10 @@ require_relative( '../models/stock.rb' )
 also_reload( '../models/*' )
 
 get '/albums' do
+  @first_char_from_titles = Album.first_char_from_titles()
+  # binding.pry
+  @albums = Album.sort_all()
   @recently_added_album = Album.all.pop
-  @albums = Album.all.reverse
   erb(:"albums/index")
 end
 
@@ -19,7 +21,14 @@ end
 
 post '/albums/new' do
   Album.new(params).save()
-  redirect to "/artists/#{params['artist_id']}"
+  redirect to "/albums"
+end
+
+get '/albums/filter/:char' do
+  @first_char_from_titles = Album.first_char_from_titles()
+  @albums = Album.filter_by_char(params[:char].upcase)
+  @recently_added_album = Album.all.pop
+  erb(:'albums/index')
 end
 
 get '/albums/:id' do
