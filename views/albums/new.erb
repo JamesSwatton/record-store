@@ -7,7 +7,7 @@
 
 <div>
   <div class="inputs">
-    <label for="artist_select">Select Artist:</label>
+    <label for="artist_select">Select Artist*:</label>
     <select name="artist_id" id="house_select" required>
       <% @artists.each do |artist| %>
         <option value=<%= artist.id %>><%= artist.swap_the %></option>
@@ -30,11 +30,11 @@
   <hr>
 
   <div>
-    <input type="submit" value="Add Album" required>
+    <input type="submit" value="Add" required>
   </div>
 
   </form>
 
 </div>
 
-<a href="/artists/new">Add Artist</a>
+<h3><a href="/artists/new">Add Artist</a></h3>
