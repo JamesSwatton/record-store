@@ -1,7 +1,7 @@
 <h2>INVENTORY</h2>
 
 <div class="stock-level">
-  <p>STOCK LEVEL  --</p>
+  <p>STOCK LEVEL   --</p>
   <table id="stock-keys">
     <tr>
       <td>HIGH</td>
@@ -26,7 +26,7 @@
   </thead>
   <body>
     <% @stock.each do |album| %>
-      <tr>
+      <tr id="table-highlight">
         <td><%= album.title  %></td>
         <td><%= album.artist.swap_the() %></td>
         <td scope="<%= album.stock_level() %>" id="stock-level"></td>

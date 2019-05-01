@@ -1,5 +1,5 @@
 body {
-  width: 60%;
+  width: 50%;
   margin: auto;
 }
 
@@ -22,6 +22,7 @@ table {
 th {
   text-align: left;
   letter-spacing: 5px;
+
 }
 
 #stock-level {
@@ -44,13 +45,12 @@ td[scope="HIGH"] {
 }
 
 td {
-
   text-align: left;
 }
 
-/* td, th {
-  border-bottom: 1px solid white;
-} */
+
+#table-highlight:hover {background-color: gray;}
+
 
 #artist-head-cell {
   /* padding-left: 20px; */
@@ -122,6 +122,10 @@ a {
   width: 20px;
   border-radius: 50%;
   background-color: green;
+}
+.inventory-tables{
+  display: flex;
+  justify-content: space-between;
 }
 
 .stock-level {
