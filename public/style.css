@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 body {
   width: 50%;
   height: 100%;
@@ -57,6 +61,8 @@ td {
 
 h2 {
   font-family: 'Noto Sans', sans-serif;
+  /* font-family: 'Shrikhand', cursive; */
+  letter-spacing: 2px;
 }
 
 
@@ -126,7 +132,7 @@ a, a:visited {
 }
 
 .list p {
-  padding: 3px;
+  padding-left: 20px;
 }
 
 .red-circle {
@@ -155,11 +161,12 @@ a, a:visited {
 }
 
 .stock-level {
-  width: 350px;
+  width: 360px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 25px;
+  margin: auto;
+  text-align: left;
 }
 
 #stock-keys {
@@ -170,14 +177,27 @@ a, a:visited {
   background-color: black;
   color: white;
   padding-left: 25px;
-  margin-bottom: -20px;
+  /* padding: 1px 0 1px 25px; */
+  /* margin-bottom: -20px; */
 }
 
 .add {
-  font-family: 'Signika', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   padding-left: 25px;
 }
 
-form {
+.add-artist {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
   padding-top: 20px;
+  font-family: 'Noto Sans', sans-serif;
+  margin: auto;
+}
+
+.add-album {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  font-family: 'Noto Sans', sans-serif;
 }

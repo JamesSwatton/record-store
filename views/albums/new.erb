@@ -3,22 +3,22 @@
 </div>
 
 
-<form action="/albums/new" method="post">
+<form class="add-album" action="/albums/new" method="post">
 
   <label for="artist_select">Select Artist:</label>
-  <select name="artist_id" id="house_select">
+  <select name="artist_id" id="house_select" required>
     <% @artists.each do |artist| %>
       <option value=<%= artist.id %>><%= artist.swap_the %></option>
     <% end %>
   </select>
 
   <label for="title">Title:</label>
-  <input type="text" name="title"/>
+  <input type="text" name="title" required/>
 
   <label for="quantity">Quantity:</label>
-  <input type="number" name="quantity"/>
+  <input type="number" name="quantity" required/>
 
-  <input type="submit" value="Add Album">
+  <input type="submit" value="Add Album" required>
 </form>
 
 <a href="/artists/new">Add Artist</a>
