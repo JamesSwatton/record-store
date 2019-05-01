@@ -3,9 +3,9 @@
 <table>
   <thead>
     <tr>
-      <th>Album</th>
-      <th>Artist</th>
-      <th>Stock<br>Level</th>
+      <th><h2>Album</h2></th>
+      <th><h2>Artist</h2></th>
+      <th id="stock-head"></th>
     </tr>
   </thead>
   <body>
@@ -13,7 +13,7 @@
       <tr>
         <td><%= album.title  %></td>
         <td><%= album.artist.swap_the() %></td>
-        <td scope="<%= album.stock_level() %>"><%= album.stock_level() %></td>
+        <td scope="<%= album.stock_level() %>" id="stock-level"></td>
       </tr>
     <% end %>
   </body>
