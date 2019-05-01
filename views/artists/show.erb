@@ -1,13 +1,25 @@
-<h2><%= @artist.swap_the() %></h2>
+<div class="title">
+  <h2><%= @artist.swap_the() %></h2>
+</div>
 
-<a href="/artists/<%= @artist.id %>/edit">Edit</a>
+<div class="add">
+  <h3><a href="/artists/<%= @artist.id %>/edit">Edit</a></h3>
+</div>
 
-<h3>Albums</h3>
 
-<ul>
-  <% @artist.albums.each do |album| %>
-  <li><a href="/albums/<%= album.id %>/edit"><%= album.title %></a></li>
-  <% end %>
-</ul>
+<hr>
+
+<div class="artist-albums">
+  <h2>Albums</h2>
+
+  <ul>
+    <% @artist.albums.each do |album| %>
+    <li><a href="/albums/<%= album.id %>/edit"><%= album.title %></a></li>
+    <% end %>
+  </ul>
+</div>
+
+
+<hr>
 
 <a href="/albums/<%= @artist.id  %>/new">Add Album</a>

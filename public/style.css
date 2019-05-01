@@ -3,7 +3,7 @@
 }
 
 body {
-  width: 50%;
+  width: 40%;
   height: 100%;
   margin: auto;
 }
@@ -11,7 +11,7 @@ body {
 nav {
   margin: auto;
   width: 320px;
-  /* padding-top: 20px; */
+  padding-top: 10px;
   display: flex;
   justify-content: space-between;
   font-family: 'Signika', sans-serif;
@@ -95,18 +95,20 @@ a, a:visited {
 .logo {
   margin: auto;
   width: 150px;
-  padding-top: 5px;
-  padding-bottom: 10px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   text-align: center;
 
 }
 
 .logo h1 {
+  padding-bottom: 20px;
   font-size: 40px;
   font-family: 'Shrikhand', cursive;
 }
 
 .logo h3 {
+  padding-top: 10px;
   font-family: 'Noto Sans', sans-serif;
 }
 
@@ -117,7 +119,7 @@ a, a:visited {
   background-color: gray;
   text-align: center;
   display: flex;
-  margin-top: 0;
+  padding: 5px 0 5px 0;
 }
 
 .search h2 {
@@ -133,6 +135,7 @@ a, a:visited {
 
 .list p {
   padding-left: 20px;
+  padding: 10px 0 10px 25px;
 }
 
 .red-circle {
@@ -176,14 +179,13 @@ a, a:visited {
 .title {
   background-color: black;
   color: white;
-  padding-left: 25px;
-  /* padding: 1px 0 1px 25px; */
-  /* margin-bottom: -20px; */
+  padding: 5px 0 5px 25px;
+
 }
 
 .add {
   font-family: 'Noto Sans', sans-serif;
-  padding-left: 25px;
+  padding: 5px 0 5px 25px;
 }
 
 .add-artist {
@@ -197,7 +199,28 @@ a, a:visited {
 
 .add-album {
   display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.add-album .inputs{
+  margin: auto;
+  width: 300px;
+  display: flex;
   justify-content: space-between;
-  padding-top: 20px;
+  padding: 10px 0;
   font-family: 'Noto Sans', sans-serif;
+}
+
+.artist-albums {
+  padding: 10px 0 10px 25px;
+}
+
+.artist-albums ul{
+  padding: 10px 0 10px 25px;
+}
+
+.artist-albums li{
+  padding: 5px 0;
 }
