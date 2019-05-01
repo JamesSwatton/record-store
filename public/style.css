@@ -55,6 +55,10 @@ td {
   text-align: left;
 }
 
+h2 {
+  font-family: 'Noto Sans', sans-serif;
+}
+
 
 #table-highlight:hover {background-color: gray;}
 
@@ -71,10 +75,11 @@ tr {
 
 }
 
-a {
-  text-decoration: none;
-  color: black;
+a, a:visited {
+    text-decoration: none;
+     color: black;
 }
+
 
 
 #menu-item {
@@ -84,7 +89,7 @@ a {
 .logo {
   margin: auto;
   width: 150px;
-  padding-top: 10px;
+  padding-top: 5px;
   padding-bottom: 10px;
   text-align: center;
 
@@ -106,18 +111,21 @@ a {
   background-color: gray;
   text-align: center;
   display: flex;
-  margin: 0 auto;
+  margin-top: 0;
 }
 
-.search h1 {
+.search h2 {
+  font-family: 'Signika', sans-serif;
 }
 
-.artists {
+.list {
+  height: 200px;
   display: flex;
   flex-direction: column;
+  overflow: scroll;
 }
 
-.artists p {
+.list p {
   padding: 3px;
 }
 
@@ -151,8 +159,25 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 25px;
 }
 
 #stock-keys {
   width: 220px;
+}
+
+.title {
+  background-color: black;
+  color: white;
+  padding-left: 25px;
+  margin-bottom: -20px;
+}
+
+.add {
+  font-family: 'Signika', sans-serif;
+  padding-left: 25px;
+}
+
+form {
+  padding-top: 20px;
 }
