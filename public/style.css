@@ -1,14 +1,21 @@
 body {
   width: 50%;
+  height: 100%;
   margin: auto;
 }
 
 nav {
   margin: auto;
-  width: 400px;
-  padding-top: 20px;
+  width: 320px;
+  /* padding-top: 20px; */
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  font-family: 'Signika', sans-serif;
+}
+
+.nav-rule {
+  width: 350px;
+  margin: auto;
 }
 
 
@@ -69,6 +76,7 @@ a {
   color: black;
 }
 
+
 #menu-item {
   display: flex;
 }
@@ -76,9 +84,19 @@ a {
 .logo {
   margin: auto;
   width: 150px;
-  padding-top: 30px;
+  padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
+
+}
+
+.logo h1 {
+  font-size: 40px;
+  font-family: 'Shrikhand', cursive;
+}
+
+.logo h3 {
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .search {
