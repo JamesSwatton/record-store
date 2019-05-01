@@ -11,29 +11,21 @@ nav {
   justify-content: space-around;
 }
 
+
 table {
-  /* border-collapse: collapse; */
-  /* height: 40%; */
-  /* left: 10%; */
-  margin: auto;
-  /* overflow-y: scroll; */
-  /* position: static; */
+  border-collapse: separate;
+  border-spacing: 5px;
+  /* margin: auto; */
   width: 100%;
 }
 
 th {
-  /* border: 1px solid black; */
-  /* padding: 10px; */
-  background: #88CCF1;
-  color: #FFF;
-  /* font-family: 'Lato', sans-serif; */
-  /* font-size: 16px;
-  font-weight: 100; */
+  text-align: left;
   letter-spacing: 5px;
-  text-transf/orm: uppercase;
 }
 
 #stock-level {
+
   border-radius: 50%;
   width: 20px;
   height: 20px
@@ -52,13 +44,24 @@ td[scope="HIGH"] {
 }
 
 td {
-  padding: 5px;
-  /* border: 1px solid black; */
-  text-align: center;
+
+  text-align: left;
+}
+
+/* td, th {
+  border-bottom: 1px solid white;
+} */
+
+#artist-head-cell {
+  /* padding-left: 20px; */
+}
+
+#artist-data-cell {
+  /* border-left: 1px solid black; */
 }
 
 tr {
-  background: #f4f7f8;
+
 }
 
 a {
@@ -77,7 +80,6 @@ a {
   padding-bottom: 10px;
   text-align: center;
 }
-
 
 .search {
   display: flex;
@@ -99,4 +101,36 @@ a {
 
 .artists p {
   padding: 3px;
+}
+
+.red-circle {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.orange-circle {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: orange;
+}
+
+.green-circle {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: green;
+}
+
+.stock-level {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#stock-keys {
+  width: 220px;
 }
