@@ -5,5 +5,5 @@ require_relative( './controllers/albums_controller.rb' )
 require_relative( './controllers/inventory_controller.rb' )
 
 get '/' do
-  erb(:"welcome")
+  erb(:"inventory/index")
 end

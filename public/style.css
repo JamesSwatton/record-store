@@ -43,16 +43,20 @@ th {
   height: 20px
 }
 
+tr {
+  font-family: 'Noto Sans', sans-serif;
+}
+
 td[scope="LOW"] {
-  background-color: red;
+  background-color: #E94B54;
 }
 
 td[scope="MED"] {
-  background-color: orange;
+  background-color: #FAC338;
 }
 
 td[scope="HIGH"] {
-  background-color: green;
+  background-color: #196D57;
 }
 
 td {
@@ -77,16 +81,14 @@ h2 {
   /* border-left: 1px solid black; */
 }
 
-tr {
-
-}
-
 a, a:visited {
     text-decoration: none;
      color: black;
 }
 
-
+a:hover {
+  color: #E94B54;
+}
 
 #menu-item {
   display: flex;
@@ -127,6 +129,7 @@ a, a:visited {
 }
 
 .list {
+  font-family: 'Noto Sans', sans-serif;
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -142,7 +145,7 @@ a, a:visited {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background-color: red;
+  background-color: #E94B54;
 }
 
 .orange-circle {
@@ -214,6 +217,7 @@ a, a:visited {
 }
 
 .artist-albums {
+  font-family: 'Noto Sans', sans-serif;
   padding: 10px 0 10px 25px;
 }
 
@@ -238,4 +242,12 @@ input[type=button], input[type=submit], input[type=reset] {
   text-decoration: none;
   cursor: pointer;
   padding: 10px;
+}
+
+#delete-button {
+  width: 300px;
+}
+
+p {
+  font-family: 'Noto Sans', sans-serif;
 }
