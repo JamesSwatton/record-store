@@ -83,7 +83,12 @@ h2 {
 
 a, a:visited {
     text-decoration: none;
-     color: black;
+    color: black;
+}
+
+a:active {
+    position: relative;
+    top: 4px;
 }
 
 a:hover {
@@ -141,26 +146,6 @@ a:hover {
   padding: 10px 0 10px 25px;
 }
 
-.red-circle {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background-color: #E94B54;
-}
-
-.orange-circle {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background-color: orange;
-}
-
-.green-circle {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background-color: green;
-}
 .inventory-tables{
   display: flex;
   justify-content: space-between;
@@ -200,16 +185,22 @@ a:hover {
   margin: auto;
 }
 
+/* album edit view */
+
 .add-album {
-  display: flex;
-  justify-content: space-around;
+  margin: auto;
+  width: 300px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
+/* .add-album div {
+  padding-top: 5px;
+  padding-bottom: 5px;
+} */
+
 .add-album .inputs{
   margin: auto;
-  width: 300px;
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
@@ -229,23 +220,47 @@ a:hover {
   padding: 5px 0;
 }
 
-input[type=text]:focus {
-  background-color: lightblue;
-}
 
-input[type=button], input[type=submit], input[type=reset] {
+.btn {
   width: 100%;
-  background-color: black;
-  border: none;
-  color: white;
-  /* padding: 16px 32px; */
-  text-decoration: none;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 5px;
+  font-size: 16px;
   cursor: pointer;
-  padding: 10px;
 }
 
-#delete-button {
-  width: 300px;
+.add:hover {
+  background-color: black;
+  color: white;
+}
+
+.edit:hover {
+  background-color: black;
+  color: white;
+}
+
+.delete {
+  margin-top: 10px;
+}
+
+.delete:hover {
+  border-color: #E94B54;
+  background-color: #E94B54;
+  color: white;
+}
+
+.link-add-artist {
+  font-family: 'Noto Sans', sans-serif;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.link-add-artist a{
+  text-decoration: underline;
 }
 
 p {

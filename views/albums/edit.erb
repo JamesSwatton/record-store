@@ -5,7 +5,7 @@
 
 
 <div class="add-album">
-  <form class="edit_album_form" action="/albums/<%= @album.id %>/edit" method="POST">
+  <form action="/albums/<%= @album.id %>/edit" method="POST">
 
     <div class="inputs">
       <label for="artist_name">Select Artist:</label>
@@ -30,19 +30,18 @@
       <input type="number" name="quantity" value="<%= @album.quantity %>" id="quantity" required>
     </div>
 
+    <br>
     <hr>
     <br>
 
-    <div>
-      <input type="submit" value="Edit"/>
-    </div>
+    <button class="btn edit" type="submit">Edit</button>
 
   </form>
 
-</div>
+  <div>
+    <form action="/albums/<%= @album.id %>/delete" method="post">
+      <button class="btn delete" type="submit">Delete</button>
+    </form>
+  </div>
 
-<div id="delete-button">
-  <form action="/albums/<%= @album.id %>/delete" method="post">
-    <input type="submit" value="Delete">
-  </form>
 </div>

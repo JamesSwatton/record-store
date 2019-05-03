@@ -5,40 +5,38 @@
 <div class="add-album">
   <form action="/albums/new" method="post">
 
-<div>
-  <div class="inputs">
-    <label for="artist_select">Select Artist*:</label>
-    <select name="artist_id" id="house_select" required>
-      <% @artists.each do |artist| %>
-        <option value=<%= artist.id %>><%= artist.swap_the %></option>
-      <% end %>
-    </select>
-  </div>
+    <div>
+      <div class="inputs">
+        <label for="artist_select">*Select Artist:</label>
+        <select name="artist_id" id="house_select" required>
+          <% @artists.each do |artist| %>
+          <option value=<%= artist.id %>><%= artist.swap_the %></option>
+          <% end %>
+        </select>
+      </div>
 
-  <div class="inputs">
-    <label for="title">Title:</label>
-    <input type="text" name="title" required/>
-  </div>
+      <div class="inputs">
+        <label for="title">Title:</label>
+        <input type="text" name="title" required/>
+      </div>
 
-  <div class="inputs">
-    <label for="quantity">Quantity:</label>
-    <input type="number" name="quantity" required/>
-  </div>
-</div>
+      <div class="inputs">
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" required/>
+      </div>
+    </div>
 
-<br>
-  <hr>
-
-  <div>
     <br>
-    <input type="submit" value="Add" required>
-  </div>
+    <hr>
+    <br>
+
+    <button class="btn add" type="submit">Add</button>
 
   </form>
 
-</div>
+  <div class="link-add-artist">
+    <p>*If artist not in selector - </p>
+    <h3><a href="/artists/new">Add Artist</a></h3>
+  </div>
 
-<div>
-  <p>*If artist not in selector - </p>
-  <h3><a href="/artists/new">Add Artist</a></h3>
 </div>
