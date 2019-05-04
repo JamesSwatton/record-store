@@ -146,6 +146,15 @@ a:hover {
   padding: 10px 0 10px 25px;
 }
 
+.edit a{
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+}
+
+.edit a:hover{
+  color: #E94B54;
+}
+
 .inventory-tables{
   display: flex;
   justify-content: space-between;
@@ -165,15 +174,26 @@ a:hover {
 }
 
 .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: black;
   color: white;
-  padding: 5px 0 5px 25px;
+  padding: 5px 20px 5px 25px;
 
 }
 
-.add {
-  font-family: 'Noto Sans', sans-serif;
-  padding: 5px 0 5px 25px;
+.title-add {
+  padding: 0 9px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+}
+
+.title-add a{
+  position:relative;
+  left: 1px;
+  bottom: 1px;
 }
 
 .add-artist {
@@ -193,11 +213,6 @@ a:hover {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
-/* .add-album div {
-  padding-top: 5px;
-  padding-bottom: 5px;
-} */
 
 .add-album .inputs{
   margin: auto;
@@ -219,7 +234,6 @@ a:hover {
 .artist-albums li{
   padding: 5px 0;
 }
-
 
 .btn {
   width: 100%;

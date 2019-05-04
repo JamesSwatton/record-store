@@ -1,11 +1,9 @@
 <div class="title">
   <h2><%= @artist.swap_the() %></h2>
+  <div class="edit">
+    <h3>| <a href="/artists/<%= @artist.id %>/edit">Edit</a> |</h3>
+  </div>
 </div>
-
-<div class="add">
-  <h3><a href="/artists/<%= @artist.id %>/edit">Edit</a></h3>
-</div>
-
 
 <hr>
 
