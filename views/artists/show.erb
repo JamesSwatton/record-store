@@ -18,6 +18,9 @@
 <div class="artist-albums">
 
   <ul>
+    <% if @artist.albums.count == 0 %>
+      <li>There are currently no albums for this artist.</li>
+    <% end %>
     <% @artist.albums.each do |album| %>
     <li><a href="/albums/<%= album.id %>"><%= album.title %></a></li>
     <% end %>
