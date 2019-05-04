@@ -129,9 +129,9 @@ a:hover {
   padding: 5px 0 5px 0;
 }
 
-.search h2 {
+/* .search h2 {
   font-family: 'Signika', sans-serif;
-}
+} */
 
 .list {
   font-family: 'Noto Sans', sans-serif;
@@ -146,12 +146,12 @@ a:hover {
   padding: 10px 0 10px 25px;
 }
 
-.edit a{
+.title-edit a, .title-add a{
   font-family: 'Noto Sans', sans-serif;
   color: white;
 }
 
-.edit a:hover{
+.title-edit a:hover, .title-add a:hover{
   color: #E94B54;
 }
 
@@ -183,26 +183,33 @@ a:hover {
 
 }
 
-.title-add {
-  padding: 0 9px;
-  border-radius: 50%;
-  background-color: white;
-  color: black;
-}
-
-.title-add a{
-  position:relative;
-  left: 1px;
-  bottom: 1px;
+.gray {
+  background-color: gray;
 }
 
 .add-artist {
   display: flex;
-  width: 400px;
-  justify-content: space-between;
-  padding-top: 20px;
+  flex-direction: column;
+  width: 300px;
+  /* justify-content: space-between; */
+  padding-top: 10px;
   font-family: 'Noto Sans', sans-serif;
   margin: auto;
+}
+
+
+.add-artist div{
+  padding-bottom: 10px;
+}
+
+.edit-artist {
+  margin: auto;
+  width: 300px;
+  padding-top: 10px;
+}
+
+.edit-artist div{
+  padding-bottom: 10px;
 }
 
 /* album edit view */
@@ -211,10 +218,13 @@ a:hover {
   margin: auto;
   width: 300px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
 }
 
-.add-album .inputs{
+.add-album div {
+  padding-bottom: 10px;
+}
+.inputs {
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -241,6 +251,7 @@ a:hover {
   background-color: white;
   color: black;
   padding: 5px;
+  margin-top: 10px;
   font-size: 16px;
   cursor: pointer;
 }
@@ -255,9 +266,6 @@ a:hover {
   color: white;
 }
 
-.delete {
-  margin-top: 10px;
-}
 
 .delete:hover {
   border-color: #E94B54;
@@ -267,7 +275,7 @@ a:hover {
 
 .link-add-artist {
   font-family: 'Noto Sans', sans-serif;
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;

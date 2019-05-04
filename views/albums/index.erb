@@ -1,5 +1,8 @@
 <div class="title">
   <h2>ALBUMS</h2>
+  <div class="title-add">
+  <h3>| <a href="/albums/new">Add</a> |</h3>
+  </div>
 </div>
 
 <div class="search">
@@ -8,11 +11,6 @@
   <% end %>
 </div>
 
-<div>
-<h3><a href="/albums/new">Add Album</a></h3>
-</div>
-
-<hr>
 
 <div class="list">
   <% @albums.each do |album| %>
@@ -23,3 +21,5 @@
     <% end %>
   <% end %>
 </div>
+<br>
+<hr>

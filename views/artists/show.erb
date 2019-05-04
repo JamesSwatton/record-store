@@ -1,14 +1,21 @@
 <div class="title">
   <h2><%= @artist.swap_the() %></h2>
-  <div class="edit">
+  <div class="title-edit">
     <h3>| <a href="/artists/<%= @artist.id %>/edit">Edit</a> |</h3>
   </div>
 </div>
 
-<hr>
+<div class="title gray">
+  <h2>Albums</h2>
+  <div class="title-add">
+    <div class="title-add">
+      <h3>| <a href="/albums/<%= @artist.id  %>/new">Add</a> |</h3>
+    </div>
+  </div>
+</div>
+
 
 <div class="artist-albums">
-  <h2>Albums</h2>
 
   <ul>
     <% @artist.albums.each do |album| %>
@@ -19,5 +26,3 @@
 
 
 <hr>
-
-<a href="/albums/<%= @artist.id  %>/new">Add Album</a>

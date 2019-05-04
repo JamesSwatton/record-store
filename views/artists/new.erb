@@ -3,10 +3,21 @@
 </div>
 
 
-</div>
-<form class="add-artist" action="/artists" method="post">
-  <label for="name">Artist Name:</label>
-  <input type="text" name="name" id="name" required/>
+<div class="add-artist">
+  <div>
+    <form action="/artists" method="post">
+    <div class="inputs" >
+      <label for="name">Artist Name:</label>
+      <input type="text" name="name" id="name" required/>
+    </div>
+  </div>
 
-  <input type="submit" value="Add Artist" required/>
-</form>
+
+    <hr>
+
+    <div>
+      <button class="btn add" type="submit">Add</button>
+    </div>
+
+  </form>
+</div>

@@ -7,32 +7,32 @@
 <div class="add-album">
   <form action="/albums/<%= @album.id %>/edit" method="POST">
 
-    <div class="inputs">
-      <label for="artist_name">Select Artist:</label>
-      <select name="artist_id" selected="<%= @album.artist_id %>">
-        <% @artists.each do |artist| %>
-          <% if artist.id == @album.artist_id %>
-            <option value=<%= artist.id %> selected><%= artist.swap_the %></option>
-          <% else %>
-            <option value=<%= artist.id %>><%= artist.swap_the %></option>
+    <div>
+      <div class="inputs">
+        <label for="artist_name">Select Artist:</label>
+        <select name="artist_id" selected="<%= @album.artist_id %>">
+          <% @artists.each do |artist| %>
+            <% if artist.id == @album.artist_id %>
+              <option value=<%= artist.id %> selected><%= artist.swap_the %></option>
+            <% else %>
+              <option value=<%= artist.id %>><%= artist.swap_the %></option>
+            <% end %>
           <% end %>
-        <% end %>
-      </select>
+        </select>
+      </div>
+
+      <div class="inputs">
+        <label for="title">Album Title:</label>
+        <input type="text" name="title" value="<%= @album.title %>" id="title" required>
+      </div>
+
+      <div class="inputs">
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" value="<%= @album.quantity %>" id="quantity" required>
+      </div>
     </div>
 
-    <div class="inputs">
-      <label for="title">Album Title:</label>
-      <input type="text" name="title" value="<%= @album.title %>" id="title" required>
-    </div>
-
-    <div class="inputs">
-      <label for="quantity">Quantity:</label>
-      <input type="number" name="quantity" value="<%= @album.quantity %>" id="quantity" required>
-    </div>
-
-    <br>
     <hr>
-    <br>
 
     <button class="btn edit" type="submit">Edit</button>
 

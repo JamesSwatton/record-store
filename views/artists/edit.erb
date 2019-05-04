@@ -1,22 +1,24 @@
 <div class="title">
-  <h2>Edit: <%= @artist.swap_the() %></h2>
+  <h2>Edit Artist</h2>
 </div>
 
+<div class="edit-artist">
+  <div>
+    <form action="/artists/<%= @artist.id %>/edit" method="POST">
+      <div class="inputs">
+        <label for="name">Artist Name:</label>
+        <input type="text" name="name" value="<%= @artist.swap_the() %>">
+      </div>
+  </div>
 
-<br>
+    <hr>
 
-<form action="/artists/<%= @artist.id %>/edit" method="POST">
+    <button class="btn edit" type="submit" name="button">Edit</button>
+  </form>
 
-  <input type="text" name="name" value="<%= @artist.swap_the() %>">
+  <form action="/artists/<%= @artist.id %>/delete" method="post">
+    <button class="btn delete" type="submit" name="button">Delete</button>
+  </form>
 
-
-  <input type="submit" value="Edit">
-</form>
-
-<br>
-
-<form action="/artists/<%= @artist.id %>/delete" method="post">
-  <input type="submit" value="Delete">
-</form>
-
-</form>
+  </form>
+</div>
