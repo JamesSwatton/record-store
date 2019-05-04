@@ -122,6 +122,7 @@ a:hover {
   padding-bottom: 20px;
   font-size: 40px;
   font-family: 'Shrikhand', cursive;
+  text-shadow: 5px 5px 7px rgba(142,142,142);
 }
 
 .logo h3 {
