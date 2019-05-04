@@ -2,6 +2,29 @@
   <h2>INVENTORY</h2>
 </div>
 
+<div class="table">
+  <table>
+    <thead>
+      <tr>
+        <th><h2>Album</h2></th>
+        <th><h2>Artist</h2></th>
+        <th id="stock-head"></th>
+      </tr>
+    </thead>
+    <body>
+      <% @stock.each do |album| %>
+        <tr>
+          <td><%= album.title  %></td>
+          <td><%= album.artist.swap_the() %></td>
+          <td scope="<%= album.stock_level() %>" id="stock-level"></td>
+        </tr>
+      <% end %>
+    </body>
+  </table>
+</div>
+
+<br>
+<hr>
 
 <div class="stock-level">
   <p>STOCK LEVEL</p>
@@ -16,24 +39,3 @@
     </tr>
   </table>
 </div>
-
-<hr>
-
-<table>
-  <thead>
-    <tr>
-      <th><h2>Album</h2></th>
-      <th><h2>Artist</h2></th>
-      <th id="stock-head"></th>
-    </tr>
-  </thead>
-  <body>
-    <% @stock.each do |album| %>
-      <tr id="table-highlight">
-        <td><%= album.title  %></td>
-        <td><%= album.artist.swap_the() %></td>
-        <td scope="<%= album.stock_level() %>" id="stock-level"></td>
-      </tr>
-    <% end %>
-  </body>
-</table>

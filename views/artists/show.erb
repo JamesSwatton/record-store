@@ -19,7 +19,7 @@
 
   <ul>
     <% @artist.albums.each do |album| %>
-    <li><a href="/albums/<%= album.id %>/edit"><%= album.title %></a></li>
+    <li><a href="/albums/<%= album.id %>"><%= album.title %></a></li>
     <% end %>
   </ul>
 </div>

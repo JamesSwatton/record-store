@@ -25,21 +25,31 @@ nav {
 
 table {
   border-collapse: separate;
-  border-spacing: 5px;
+  border-spacing: 10px;
   /* margin: auto; */
   width: 100%;
+}
+
+.table {
+  height: 293px;
+  overflow: scroll;
+}
+
+.index-table {
+  height: 250px;
+  overflow: scroll;
+
 }
 
 th {
   text-align: left;
   letter-spacing: 5px;
-
 }
 
 #stock-level {
 
   border-radius: 50%;
-  width: 20px;
+  width: 22px;
   height: 20px
 }
 
@@ -129,13 +139,9 @@ a:hover {
   padding: 5px 0 5px 0;
 }
 
-/* .search h2 {
-  font-family: 'Signika', sans-serif;
-} */
-
 .list {
   font-family: 'Noto Sans', sans-serif;
-  height: 200px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   overflow: scroll;
@@ -170,7 +176,7 @@ a:hover {
 }
 
 #stock-keys {
-  width: 220px;
+  width: 260px;
 }
 
 .title {
@@ -212,7 +218,11 @@ a:hover {
   padding-bottom: 10px;
 }
 
-/* album edit view */
+.show-album {
+  margin: auto;
+  width:200px;
+  padding-top: 10px;
+}
 
 .add-album {
   margin: auto;

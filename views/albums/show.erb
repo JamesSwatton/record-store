@@ -1,6 +1,20 @@
-<h2><%= @album.title %></h2>
+<div class="title">
+  <h2><%= @album.title %></h2>
+  <div class="title-edit">
+    <h3>| <a href="/albums/<%= @album.id %>/edit">Edit</a> |</h3>
+  </div>
+</div>
 
-<p>Artist -- <%= @album.artist.swap_the() %></p>
-<p>Availible Stock -- <%= @album.quantity %></p>
+  <div class="show-album">
+    <div class="inputs">
+      <p>Artist:</p> <p><%= @album.artist.swap_the() %></p>
+    </div>
 
-<a href="/albums/<%= @album.id %>/edit">Edit</a>
+    <div class="inputs">
+      <p>Availible Stock:</p> <p><%= @album.quantity %></p>
+    </div>
+
+  </div>
+
+<br>
+<hr>

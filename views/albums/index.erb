@@ -12,14 +12,22 @@
 </div>
 
 
-<div class="list">
-  <% @albums.each do |album| %>
-    <% if album.title != @recently_added_album.title %>
-      <p><a href="/albums/<%= album.id %>"> <%= album.title %> </a></p>
-    <% else %>
-      <p><a href="/albums/<%= album.id %>"> <%= album.title %> </a> -- recently added --</p>
-    <% end %>
-  <% end %>
+<div class="index-table">
+  <table>
+    <body>
+      <% @albums.each do |album| %>
+        <% if album.title != @recently_added_album.title %>
+          <tr>
+            <td><a href="/albums/<%= album.id %>"><%= album.title  %> </a></td>
+          </tr>
+        <% else %>
+          <tr>
+            <td><a href="/albums/<%= album.id %>"><%= album.title  %> </a>-- recently added --</td>
+          </tr>
+        <% end %>
+      <% end %>
+    </body>
+  </table>
 </div>
 <br>
 <hr>

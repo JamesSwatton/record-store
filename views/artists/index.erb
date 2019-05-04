@@ -15,15 +15,27 @@
 <!-- adds tag showing artist was recintly added if poped from list %> -->
 <!-- index artists alphabetically while ignoring 'The' prefix -->
 
-<div class="list">
-  <% @artists.each do |artist| %>
-  <% name = artist.swap_the()%>
-    <% if name != @recently_added_artist.swap_the() %>
-      <p><a href="/artists/<%= artist.id %>"> <%= name  %> </a></p>
-    <% else %>
-        <p><a href="/artists/<%= artist.id %>"> <%= name %> </a> -- recently added --</p>
-    <% end %>
-  <% end %>
+
+<div class="index-table">
+  <table>
+    <body>
+      <% @artists.each do |artist| %>
+      <% name = artist.swap_the()%>
+        <% if name != @recently_added_artist.swap_the() %>
+          <tr>
+            <td><a href="/artists/<%= artist.id %>"><%= name  %> </a></td>
+          </tr>
+        <% else %>
+          <tr>
+            <td><a href="/artists/<%= artist.id %>"><%= name  %> </a>-- recently added --</td>
+          </tr>
+        <% end %>
+      <% end %>
+    </body>
+  </table>
 </div>
+
+
+
 <br>
 <hr>
