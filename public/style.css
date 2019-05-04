@@ -188,7 +188,10 @@ a:hover {
   background-color: black;
   color: white;
   padding: 5px 20px 5px 25px;
+}
 
+.title p {
+  margin-right: 300px;
 }
 
 .gray {
@@ -299,4 +302,9 @@ a:hover {
 
 p {
   font-family: 'Noto Sans', sans-serif;
+}
+
+.counter {
+  margin: auto;
+  width: 50px;
 }
