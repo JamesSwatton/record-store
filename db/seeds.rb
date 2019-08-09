@@ -60,3 +60,6 @@ album2.save()
 album3.save()
 album4.save()
 
+# album4.price = 10.50
+# album4.update()
+# p album4.price

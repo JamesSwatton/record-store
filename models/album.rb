@@ -11,7 +11,7 @@ class Album
     @title = options['title']
     @artist_id = options['artist_id'].to_i
     @quantity = options['quantity'].to_i
-    @price = options['price'].to_f
+    @price = options['price']
   end
 
   def save()
@@ -25,9 +25,10 @@ class Album
 
   def update()
     sql = "UPDATE albums
-          SET (title, artist_id, quantity) = ($1,$2,$3,$4)
+          SET (title, artist_id, quantity, price) = ($1,$2,$3,$4)
           WHERE id = $5"
-    values = [@title, @artist_id, @quantity, @price, @id]
+    price = '%.2f' % @price
+    values = [@title, @artist_id, @quantity, price, @id]
     SqlRunner.run(sql, values)
   end
 

@@ -12,5 +12,5 @@ CREATE TABLE albums (
   title VARCHAR(255),
   artist_id INT8 REFERENCES artists(id) ON DELETE CASCADE,
   quantity INT4,
-  price FLOAT
+  price VARCHAR(255)
 );
