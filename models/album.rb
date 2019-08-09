@@ -4,29 +4,30 @@ require_relative('./artist')
 class Album
 
   attr_reader :id, :title, :artist_id
-  attr_accessor :quantity
+  attr_accessor :quantity, :price
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @title = options['title']
     @artist_id = options['artist_id'].to_i
     @quantity = options['quantity'].to_i
+    @price = options['price'].to_f
   end
 
   def save()
-    sql = "INSERT INTO albums (title, artist_id, quantity)
-          VALUES ($1,$2,$3)
+    sql = "INSERT INTO albums (title, artist_id, quantity, price)
+          VALUES ($1,$2,$3,$4)
           RETURNING id;"
-    values = [@title, @artist_id, @quantity]
+    values = [@title, @artist_id, @quantity, @price]
     results = SqlRunner.run(sql, values)
     @id = results.first['id'].to_i
   end
 
   def update()
     sql = "UPDATE albums
-          SET (title, artist_id, quantity) = ($1,$2,$3)
-          WHERE id = $4"
-    values = [@title, @artist_id, @quantity, @id]
+          SET (title, artist_id, quantity) = ($1,$2,$3,$4)
+          WHERE id = $5"
+    values = [@title, @artist_id, @quantity, @price, @id]
     SqlRunner.run(sql, values)
   end
 
@@ -63,8 +64,7 @@ class Album
   end
 
   def self.sort_all_by_artist_name()
-    sql = "SELECT albums.id, albums.title, albums.artist_id, albums.quantity
-          FROM albums
+    sql = "SELECT * FROM albums
           JOIN artists
           ON artists.id = albums.artist_id
           ORDER BY artists.name;"
