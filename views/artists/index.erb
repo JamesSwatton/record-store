@@ -1,8 +1,12 @@
 <div class="title">
-  <h2>ARTISTS</h2>
+    <div class="title-add">
+        <h2><a href="/artists">ARTISTS</a></h2>
+    </div>
+
   <p><em>(<%= @artists.count %>)</em></p>
+
   <div class="title-add">
-    <h3>| <a href="/artists/new">Add</a> |</h3>
+      <h3>| <a href="/artists/new">Add</a> |</h3>
   </div>
 </div>
 
@@ -13,7 +17,7 @@
 </div>
 
 
-<!-- adds tag showing artist was recintly added if poped from list %> -->
+<!-- adds tag showing artist was recently added if popped from list %> -->
 <!-- index artists alphabetically while ignoring 'The' prefix -->
 
 
@@ -42,6 +46,3 @@
 <hr>
 <br>
 
-<!-- <div class="counter">
-  <p><em>(<%= @artists.count %>)</em></p>
-</div> -->
