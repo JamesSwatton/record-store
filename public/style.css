@@ -154,14 +154,6 @@ a:hover {
   padding: 10px 0 10px 25px;
 }
 
-.title-edit a, .title-add a{
-  font-family: 'Noto Sans', sans-serif;
-  color: white;
-}
-
-.title-edit a:hover, .title-add a:hover{
-  color: #E94B54;
-}
 
 .inventory-tables{
   display: flex;
@@ -194,6 +186,15 @@ a:hover {
   margin-right: 300px;
 }
 
+.title-edit a, .title-add a{
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+}
+
+.title-edit a:hover, .title-add a:hover{
+    color: #E94B54;
+}
+
 .gray {
   background-color: gray;
 }
@@ -207,7 +208,6 @@ a:hover {
   font-family: 'Noto Sans', sans-serif;
   margin: auto;
 }
-
 
 .add-artist div{
   padding-bottom: 10px;
