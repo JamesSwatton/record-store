@@ -1,97 +1,100 @@
 * {
-  margin: 0;
+    margin: 0;
 }
 
 body {
-  width: 40%;
-  min-width: 450px;
-  height: 100%;
-  margin: auto;
+    width: 40%;
+    min-width: 450px;
+    height: 100%;
+    margin: auto;
 }
 
 nav {
-  margin: auto;
-  width: 320px;
-  padding-top: 10px;
-  display: flex;
-  justify-content: space-between;
-  font-family: 'Signika', sans-serif;
+    margin: auto;
+    width: 320px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Signika', sans-serif;
 }
 
 .nav-rule {
-  width: 350px;
-  margin: auto;
+    width: 350px;
+    margin: auto;
 }
 
 
 table {
-  border-collapse: separate;
-  border-spacing: 10px;
-  /* margin: auto; */
-  width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+    /* margin: auto; */
+    width: 100%;
 }
 
 .table {
-  height: 293px;
-  overflow: scroll;
+    height: 293px;
+    overflow: scroll;
 }
 
 .index-table {
-  height: 250px;
-  overflow: scroll;
+    height: 250px;
+    overflow: scroll;
 
 }
 
 th {
-  text-align: left;
-  letter-spacing: 5px;
+    text-align: left;
+    letter-spacing: 5px;
 }
 
 #stock-level {
-  border-radius: 50%;
-  width: 22px;
-  height: 20px
+    border-radius: 50%;
+    width: 22px;
+    height: 20px
 }
 
 tr {
-  font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 td[scope="LOW"] {
-  background-color: #E94B54;
+    background-color: #E94B54;
 }
 
 td[scope="MED"] {
-  background-color: #FAC338;
+    background-color: #FAC338;
 }
 
 td[scope="HIGH"] {
-  background-color: #196D57;
+    background-color: #196D57;
 }
 
 td {
-  text-align: left;
+    text-align: left;
 }
 
 h2 {
-  font-family: 'Noto Sans', sans-serif;
-  /* font-family: 'Shrikhand', cursive; */
-  letter-spacing: 2px;
+    font-family: 'Noto Sans', sans-serif;
+    /* font-family: 'Shrikhand', cursive; */
+    letter-spacing: 2px;
 }
 
 
-#table-highlight:hover {background-color: gray;}
+#table-highlight:hover {
+    background-color: gray;
+}
 
 
 #artist-head-cell {
-  /* padding-left: 20px; */
+    /* padding-left: 20px; */
 }
 
 #artist-data-cell {
-  /* border-left: 1px solid black; */
+    /* border-left: 1px solid black; */
 }
 
-a, a:visited {
+a,
+a:visited {
     text-decoration: none;
     color: black;
 }
@@ -102,209 +105,244 @@ a:active {
 }
 
 a:hover {
-  color: #E94B54;
+    color: #E94B54;
 }
 
 #menu-item {
-  display: flex;
+    display: flex;
 }
 
 .logo {
-  margin: auto;
-  width: 150px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  text-align: center;
+    margin: auto;
+    width: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
 
 }
 
 .logo h1 {
-  padding-bottom: 20px;
-  font-size: 40px;
-  font-family: 'Shrikhand', cursive;
-  text-shadow: 5px 5px 7px rgba(142,142,142);
+    padding-bottom: 20px;
+    font-size: 40px;
+    font-family: 'Shrikhand', cursive;
+    text-shadow: 5px 5px 7px rgba(142, 142, 142);
 }
 
 .logo h3 {
-  padding-top: 10px;
-  font-family: 'Noto Sans', sans-serif;
+    padding-top: 10px;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .search {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  background-color: gray;
-  text-align: center;
-  display: flex;
-  padding: 5px 0 5px 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: gray;
+    text-align: center;
+    display: flex;
+    padding: 5px 0 5px 0;
 }
 
 .list {
-  font-family: 'Noto Sans', sans-serif;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  overflow: scroll;
+    font-family: 'Noto Sans', sans-serif;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
 }
 
 .list p {
-  padding-left: 20px;
-  padding: 10px 0 10px 25px;
+    padding-left: 20px;
+    padding: 10px 0 10px 25px;
 }
 
 
-.inventory-tables{
-  display: flex;
-  justify-content: space-between;
+.inventory-tables {
+    display: flex;
+    justify-content: space-between;
 }
 
 .stock-level {
-  width: 360px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-  text-align: left;
+    width: 360px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    text-align: left;
+}
+
+.stock-total {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 
 #stock-keys {
-  width: 260px;
+    width: 260px;
 }
 
 .title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: black;
-  color: white;
-  padding: 5px 20px 5px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 5px 20px 5px 25px;
 }
 
 .title p {
-  margin-right: 300px;
+    margin-right: 300px;
 }
 
-.title-edit a, .title-add a{
+.title-edit a,
+.title-add a {
     font-family: 'Noto Sans', sans-serif;
     color: white;
 }
 
-.title-edit a:hover, .title-add a:hover{
+.title-edit a:hover,
+.title-add a:hover {
     color: #E94B54;
 }
 
 .gray {
-  background-color: gray;
+    background-color: gray;
 }
 
 .add-artist {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  /* justify-content: space-between; */
-  padding-top: 10px;
-  font-family: 'Noto Sans', sans-serif;
-  margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    /* justify-content: space-between; */
+    padding-top: 10px;
+    font-family: 'Noto Sans', sans-serif;
+    margin: auto;
 }
 
-.add-artist div{
-  padding-bottom: 10px;
+.add-artist div {
+    padding-bottom: 10px;
 }
 
 .edit-artist {
-  margin: auto;
-  width: 300px;
-  padding-top: 10px;
+    margin: auto;
+    width: 300px;
+    padding-top: 10px;
 }
 
-.edit-artist div{
-  padding-bottom: 10px;
+.edit-artist div {
+    padding-bottom: 10px;
 }
 
 .show-album {
-  margin: auto;
-  width:200px;
-  padding-top: 10px;
+    margin: auto;
+    width: 200px;
+    padding-top: 10px;
 }
 
 .add-album {
-  margin: auto;
-  width: 300px;
-  padding-top: 10px;
-  /* padding-bottom: 10px; */
+    margin: auto;
+    width: 300px;
+    padding-top: 10px;
+    /* padding-bottom: 10px; */
 }
 
 .add-album div {
-  padding-bottom: 10px;
+    padding-bottom: 10px;
 }
-.inputs {
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
+
+.sort {
   font-family: 'Noto Sans', sans-serif;
+  width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sort-btn {
+  height: 10px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.sort-btn-low {
+  background-color: #E94B54;
+}
+
+.sort-btn-med {
+  background-color: #FAC338;
+}
+
+.sort-btn-high {
+  background-color: #196D57;
+}
+
+.inputs {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .artist-albums {
-  font-family: 'Noto Sans', sans-serif;
-  padding: 10px 0 10px 25px;
+    font-family: 'Noto Sans', sans-serif;
+    padding: 10px 0 10px 25px;
 }
 
-.artist-albums ul{
-  padding: 10px 0 10px 25px;
+.artist-albums ul {
+    padding: 10px 0 10px 25px;
 }
 
-.artist-albums li{
-  padding: 5px 0;
+.artist-albums li {
+    padding: 5px 0;
 }
 
 .btn {
-  width: 100%;
-  border: 2px solid black;
-  background-color: white;
-  color: black;
-  padding: 5px;
-  margin-top: 10px;
-  font-size: 16px;
-  cursor: pointer;
+    width: 100%;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .add:hover {
-  background-color: black;
-  color: white;
+    background-color: black;
+    color: white;
 }
 
 .edit:hover {
-  background-color: black;
-  color: white;
+    background-color: black;
+    color: white;
 }
 
 
 .delete:hover {
-  border-color: #E94B54;
-  background-color: #E94B54;
-  color: white;
+    border-color: #E94B54;
+    background-color: #E94B54;
+    color: white;
 }
 
 .link-add-artist {
-  font-family: 'Noto Sans', sans-serif;
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    font-family: 'Noto Sans', sans-serif;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.link-add-artist a{
-  text-decoration: underline;
+.link-add-artist a {
+    text-decoration: underline;
 }
 
 p {
-  font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .counter {
-  margin: auto;
-  width: 50px;
+    margin: auto;
+    width: 50px;
 }
