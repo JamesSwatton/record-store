@@ -79,6 +79,18 @@ h2 {
     letter-spacing: 2px;
 }
 
+button[scope="LOW"] {
+    background-color: #E94B54;
+}
+
+button[scope="MED"] {
+    background-color: #FAC338;
+}
+
+button[scope="HIGH"] {
+    background-color: #196D57;
+}
+
 
 #table-highlight:hover {
     background-color: gray;
@@ -262,6 +274,7 @@ a:hover {
 .sort-btn {
   height: 10px;
     padding: 10px;
+    margin-bottom: 4px;
     border-radius: 50%;
 }
 
