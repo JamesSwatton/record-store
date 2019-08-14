@@ -1,5 +1,11 @@
 <div class="title">
   <h2>INVENTORY</h2>
+  <div class="sort">
+      <h3>Sort |</h3>
+      <% for level in @stock_levels do %>
+        <a href="/inventory/sort/<%= level.downcase %>"><button scope="<%= level %>" class="sort-btn"></button></a>
+      <% end %>
+  </div>
 </div>
 
 <div class="table">
@@ -26,20 +32,20 @@
 <br>
 <hr>
 
-<div class="stock-level">
-  <p>STOCK LEVEL</p>
-  <table id="stock-keys">
-    <tr>
-      <td>HIGH</td>
-      <td scope="HIGH" id="stock-level"></td>
-      <td>MED</td>
-      <td scope="MED" id="stock-level"></td>
-      <td>LOW</td>
-      <td scope="LOW" id="stock-level"></td>
-    </tr>
-  </table>
-</div>
+<!-- <div class="stock-level"> -->
+<!-- <p>STOCK LEVEL</p> -->
+<!-- <table id="stock-keys"> -->
+<!-- <tr> -->
+<!-- <td>HIGH</td> -->
+<!-- <td scope="HIGH" id="stock-level"></td> -->
+<!-- <td>MED</td> -->
+<!-- <td scope="MED" id="stock-level"></td> -->
+<!-- <td>LOW</td> -->
+<!-- <td scope="LOW" id="stock-level"></td> -->
+<!-- </tr> -->
+<!-- </table> -->
+<!-- </div> -->
 
 <div class="stock-total">
-    <h2>STOCK TOTAL: £<%= @total %></h2>
+    <h2>STOCK TOTAL: £<u><%= @total %></u></h2>
 </div>

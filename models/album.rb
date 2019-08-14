@@ -50,6 +50,15 @@ class Album
     end
   end
 
+  def self.sort_all_by_stock_level(level)
+    all_albums = Album.all()
+    low_to_high = all_albums.sort_by { |album| album.quantity}
+    if level == "HIGH"
+      return low_to_high.reverse
+    end
+    return low_to_high
+  end
+
   def self.all_stock_total()
     total = 0
     for album in Album.all() do
