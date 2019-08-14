@@ -48,7 +48,6 @@ th {
 }
 
 #stock-level {
-
   border-radius: 50%;
   width: 22px;
   height: 20px
@@ -168,6 +167,7 @@ a:hover {
   margin: auto;
   text-align: left;
 }
+
 
 #stock-keys {
   width: 260px;

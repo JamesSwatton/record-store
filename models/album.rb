@@ -50,6 +50,15 @@ class Album
     end
   end
 
+  def self.all_stock_total()
+    total = 0
+    for album in Album.all() do
+      album_total = album.price.to_f * album.quantity.to_f
+      total += album_total
+    end
+    return '%.2f' % total
+  end
+
   def self.first_char_from_titles()
     all_titles = Album.sort_all.map { |album| album.title }
     first_char_from_title = all_titles.map { |title| title[0]}
