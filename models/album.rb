@@ -18,7 +18,8 @@ class Album
     sql = "INSERT INTO albums (title, artist_id, quantity, price)
           VALUES ($1,$2,$3,$4)
           RETURNING id;"
-    values = [@title, @artist_id, @quantity, @price]
+    price = '%.2f' % @price
+    values = [@title, @artist_id, @quantity, price]
     results = SqlRunner.run(sql, values)
     @id = results.first['id'].to_i
   end

@@ -70,7 +70,7 @@ td[scope="HIGH"] {
 }
 
 td {
-    text-align: left;
+    /* text-align: left; */
 }
 
 h2 {
@@ -91,6 +91,9 @@ button[scope="HIGH"] {
     background-color: #196D57;
 }
 
+.price {
+  text-align: right;
+}
 
 #table-highlight:hover {
     background-color: gray;
